@@ -1,10 +1,10 @@
-import { gsap } from 'https://cdn.skypack.dev/gsap';
-import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap/ScrollTrigger';
+import { gsap } from "https://cdn.skypack.dev/gsap";
+import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const scroll = () => {
-  const panels = Array.from(document.querySelectorAll('.sticky-section_panel'));
+  const panels = Array.from(document.querySelectorAll(".sticky-section_panel"));
 
   panels.forEach((panel, index) => {
     const isLast = index === panels.length - 1;
@@ -13,7 +13,7 @@ const scroll = () => {
       .timeline({
         scrollTrigger: {
           trigger: panel,
-          start: 'top top',
+          start: "top top",
           scrub: true,
         },
       })
@@ -21,17 +21,18 @@ const scroll = () => {
       .to(
         panel,
         {
-          ease: 'none',
-          startAt: { filter: 'brightness(100%) blur(0px)' },
-          filter: isLast ? 'none' : 'brightness(50%) blur(10px)',
+          ease: "none",
+          startAt: { filter: "brightness(100%) blur(0px)" },
+          filter: isLast ? "none" : "brightness(50%) blur(10px)",
           scale: 0.9,
           borderRadius: 40,
         },
-        '<'
+        "<"
       );
   });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   scroll();
+  console.log("Sticky sections 01");
 });
