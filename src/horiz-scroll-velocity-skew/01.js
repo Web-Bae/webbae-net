@@ -10,9 +10,8 @@ const horizontalSection = document.querySelector("#horizontal-section");
 const wrapper = horizontalSection.querySelector(".wrapper");
 const items = wrapper.querySelectorAll(".item");
 
-// Function for the horizontal scrolling effect and the parallax effect
 function initScroll() {
-  // HORIZONTAL SCROLLING EFFECT
+  // Horizontal SCrolling Effect
   let wrapperTween = gsap.to(wrapper, {
     x: () => {
       const itemWidth = items[0].offsetWidth;
