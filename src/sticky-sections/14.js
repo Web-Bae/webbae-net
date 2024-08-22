@@ -1,10 +1,10 @@
-import { gsap } from 'https://cdn.skypack.dev/gsap';
-import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap/ScrollTrigger';
+import { gsap } from "https://cdn.skypack.dev/gsap";
+import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const scroll = () => {
-  const panels = Array.from(document.querySelectorAll('.sticky-section_panel'));
+  const panels = Array.from(document.querySelectorAll(".sticky-section_panel"));
 
   panels.forEach((panel, index) => {
     const direction = index % 2 === 0 ? 1 : -1; // Alternate direction for a bit of added flair
@@ -13,16 +13,16 @@ const scroll = () => {
       .timeline({
         scrollTrigger: {
           trigger: panel,
-          start: 'top top',
-          end: 'bottom top', // Ensures the animation runs through the full height of the panel
+          start: "top top",
+          end: "bottom top", // Ensures the animation runs through the full height of the panel
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         defaults: {
-          ease: 'none',
+          ease: "none",
         },
       })
-      .set(panel, { transformOrigin: '50% 50%' }) // Centering transform origin for an even scaling and rotation effect
+      .set(panel, { transformOrigin: "50% 50%" }) // Centering transform origin for an even scaling and rotation effect
       .to(panel, {
         scaleX: 0.8, // Slightly reduce the width to emphasize the vertical scaling
         scaleY: 0, // Scale down to nothing vertically
@@ -31,6 +31,6 @@ const scroll = () => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   scroll();
 });

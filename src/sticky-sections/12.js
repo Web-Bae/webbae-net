@@ -1,10 +1,10 @@
-import { gsap } from 'https://cdn.skypack.dev/gsap';
-import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap/ScrollTrigger';
+import { gsap } from "https://cdn.skypack.dev/gsap";
+import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const scroll = () => {
-  const panels = Array.from(document.querySelectorAll('.sticky-section_panel'));
+  const panels = Array.from(document.querySelectorAll(".sticky-section_panel"));
 
   panels.forEach((panel, index) => {
     let isLast = index === panels.length - 1;
@@ -16,16 +16,16 @@ const scroll = () => {
         rotation: 0,
         scrollTrigger: {
           trigger: panel,
-          start: 'top top',
-          end: isLast ? '+=80%' : 'bottom top',
+          start: "top top",
+          end: isLast ? "+=80%" : "bottom top",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       }
     );
   });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   scroll();
 });
