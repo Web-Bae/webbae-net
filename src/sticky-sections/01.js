@@ -34,5 +34,4 @@ const scroll = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   scroll();
-  console.log("Sticky sections 01");
 });
