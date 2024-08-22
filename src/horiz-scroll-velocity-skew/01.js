@@ -11,7 +11,7 @@ const wrapper = horizontalSection.querySelector(".wrapper");
 const items = wrapper.querySelectorAll(".item");
 
 function initScroll() {
-  // Horizontal SCrolling Effect
+  // Horizontal Scrolling Effect
   let wrapperTween = gsap.to(wrapper, {
     x: () => {
       const itemWidth = items[0].offsetWidth;
@@ -30,7 +30,7 @@ function initScroll() {
     },
   });
 
-  // PARALLAX EFFECT
+  // Parallax Effect
   items.forEach((item) => {
     gsap.fromTo(
       item,
