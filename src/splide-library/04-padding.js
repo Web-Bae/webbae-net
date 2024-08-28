@@ -2,9 +2,8 @@ import splidejsSplide from "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/
 
 const splide = new splidejsSplide(".splide", {
   type: "loop",
+  padding: "6rem",
   perPage: 3,
-  focus: 0, // gives us a pagination dot for each element, remove for 1 dot per page
-  perMove: 1,
   gap: "1rem",
   pagination: true,
   breakpoints: {
@@ -15,9 +14,6 @@ const splide = new splidejsSplide(".splide", {
       perPage: 1,
     },
   },
-  // classes: {
-  //   pagination: "splide__pagination basic-pagination",
-  // },
 });
 
 splide.mount();

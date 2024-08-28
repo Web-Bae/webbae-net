@@ -5,7 +5,7 @@ const splide = new splidejsSplide(".splide", {
   perPage: 3,
   focus: 0, // gives us a pagination dot for each element, remove for 1 dot per page
   perMove: 1,
-  gap: "1rem",
+  gap: "2rem",
   pagination: true,
   breakpoints: {
     768: {
@@ -15,9 +15,14 @@ const splide = new splidejsSplide(".splide", {
       perPage: 1,
     },
   },
-  // classes: {
-  //   pagination: "splide__pagination basic-pagination",
-  // },
+});
+
+splide.on("pagination:mounted", function (data) {
+  // Inject the page number into the pagination buttons
+  // Pad single digits with a leading zero
+  data.items.forEach(function (item) {
+    item.button.textContent = String(item.page + 1).padStart(2, "0");
+  });
 });
 
 splide.mount();
