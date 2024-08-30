@@ -6,6 +6,10 @@ const splide = new splidejsSplide(".splide", {
   perPage: 3,
   gap: "1rem",
   pagination: true,
+  classes: {
+    pagination: "splide__pagination padding",
+    page: "splide__pagination__page padding",
+  },
   breakpoints: {
     768: {
       perPage: 2,

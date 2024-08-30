@@ -7,6 +7,10 @@ const splide = new splidejsSplide(".splide", {
   perMove: 1,
   gap: "2rem",
   pagination: true,
+  classes: {
+    pagination: "splide__pagination custom",
+    page: "splide__pagination__page custom",
+  },
   breakpoints: {
     768: {
       perPage: 2,

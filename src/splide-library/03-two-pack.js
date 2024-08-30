@@ -3,11 +3,15 @@ import splidejsSplide from "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/
 const splide = new splidejsSplide(".splide", {
   type: "loop",
   perPage: 2,
-  //   focus: 0, // gives us a pagination dot for each element, remove for 1 dot per page
-  //   perMove: 1,
   arrows: false,
   gap: "2rem",
   pagination: true,
+  classes: {
+    pagination: "splide__pagination two-pack",
+    page: "splide__pagination__page two-pack",
+    prevArrow: "splide__custom-arrow two-pack-prev",
+    nextArrow: "splide__custom-arrow two-pack-next",
+  },
   breakpoints: {
     768: {
       perPage: 1,
