@@ -8,6 +8,7 @@ const splide = new splidejsSplide(".splide", {
   gap: "1rem",
   pagination: true,
   classes: {
+    // Custom class names for the pagination elements
     pagination: "splide__pagination basic",
     page: "splide__pagination__page basic",
   },
