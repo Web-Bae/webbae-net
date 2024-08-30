@@ -8,8 +8,8 @@ const splide = new splidejsSplide(".splide", {
   gap: "2rem",
   pagination: true,
   classes: {
-    pagination: "splide__pagination custom",
-    page: "splide__pagination__page custom",
+    pagination: "splide__pagination custom-pagination",
+    page: "splide__pagination__page custom-pagination",
   },
   breakpoints: {
     768: {
