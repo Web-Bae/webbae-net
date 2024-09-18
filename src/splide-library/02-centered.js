@@ -2,6 +2,7 @@ import splidejsSplide from "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/
 
 const splide = new splidejsSplide(".splide", {
   type: "loop",
+  updateOnMove: true,
   perPage: 4,
   focus: "center",
   perMove: 1,

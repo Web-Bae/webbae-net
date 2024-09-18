@@ -5,6 +5,7 @@ const basicSplideElements = document.querySelectorAll(".splide.basic");
 basicSplideElements.forEach((basicSplide) => {
   const splide = new splidejsSplide(basicSplide, {
     type: "loop",
+    updateOnMove: true,
     perPage: 3,
     focus: 0, // gives us a pagination dot for each element, instead of 1 dot per page
     perMove: 1,

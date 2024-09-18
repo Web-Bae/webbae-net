@@ -2,6 +2,7 @@ import splidejsSplide from "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/
 
 const splideMain = new splidejsSplide(".splide.main", {
   type: "loop",
+  updateOnMove: true,
   perPage: 1,
   pagination: false,
   arrows: false,
@@ -9,6 +10,7 @@ const splideMain = new splidejsSplide(".splide.main", {
 
 const splideThumbs = new splidejsSplide(".splide.thumbs", {
   perPage: 6,
+  updateOnMove: true,
   isNavigation: true,
   gap: "0.5rem",
   focus: "center",

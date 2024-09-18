@@ -2,6 +2,7 @@ import splidejsSplide from "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/
 
 const splide = new splidejsSplide(".splide", {
   type: "loop",
+  updateOnMove: true,
   perPage: 3,
   focus: 0, // gives us a pagination dot for each element, instead of 1 dot per page
   perMove: 1,
