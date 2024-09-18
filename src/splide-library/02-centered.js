@@ -25,15 +25,4 @@ const splide = new splidejsSplide(".splide", {
   },
 });
 
-// Removes the delay for css transitions since Splide doesn't shift the is-active class until the transition is complete
-splide.on("move", function (newIndex) {
-  // Remove the 'is-active' class from all slides
-  splide.Components.Elements.slides.forEach((slide) =>
-    slide.classList.remove("is-active")
-  );
-
-  // Add the 'is-active' class to the new active slide
-  splide.Components.Elements.slides[newIndex].classList.add("is-active");
-});
-
 splide.mount();
